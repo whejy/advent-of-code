@@ -13,18 +13,20 @@ For example, suppose the Elves finish writing their items' Calories and end up w
 
 1000
 2000
-3000
-
-4000
-
+3000<br />
+<br />
+4000<br />
+<br />
 5000
-6000
-
+6000<br />
+<br />
 7000
 8000
-9000
-
+9000<br />
+<br />
 10000
+<br />
+<br />
 This list represents the Calories of the food carried by five Elves:
 
 The first Elf is carrying food with 1000, 2000, and 3000 Calories, a total of 6000 Calories.
@@ -36,9 +38,7 @@ In case the Elves get hungry and need extra snacks, they need to know which Elf 
 
 Find the Elf carrying the most Calories. How many total Calories is that Elf carrying?
 
-Your puzzle answer was 70698.
-
---- Part Two ---
+### --- Part Two ---
 By the time you calculate the answer to the Elves' question, they've already realized that the Elf carrying the most Calories of food might eventually run out of snacks.
 
 To avoid this unacceptable situation, the Elves would instead like to know the total Calories carried by the top three Elves carrying the most Calories. That way, even if one of those Elves runs out of snacks, they still have two backups.
