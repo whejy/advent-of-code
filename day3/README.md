@@ -47,9 +47,9 @@ jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL<br />
 PmmdzqPrVvPwwTWBwg<br /><br />
 And the second group's rucksacks are the next three lines:
 
-wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn
-ttgJtRGJQctTZtZT
-CrZsJsPPZsGzwwsLwLmpwMDw
+wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn<br />
+ttgJtRGJQctTZtZT<br />
+CrZsJsPPZsGzwwsLwLmpwMDw<br /><br />
 In the first group, the only item type that appears in all three rucksacks is lowercase r; this must be their badges. In the second group, their badge item type must be Z.
 
 Priorities for these items must still be found to organize the sticker attachment efforts: here, they are 18 (r) for the first group and 52 (Z) for the second group. The sum of these is 70.
