@@ -4,10 +4,14 @@ const input = require('fs')
   .map((section) => section.split(','))
 
 // Transmute input to array of integer subarrays
-const pairs = input.map((el) => [
-  [parseInt(el[0].split('-')[0]), parseInt(el[0].split('-')[1])],
-  [parseInt(el[1].split('-')[0]), parseInt(el[1].split('-')[1])],
-])
+const pairs = input.map((el) => {
+  const subArr1 = el[0].split('-')
+  const subArr2 = el[1].split('-')
+  return [
+    [parseInt(subArr1[0]), parseInt(subArr1[1])],
+    [parseInt(subArr2[0]), parseInt(subArr2[1])],
+  ]
+})
 
 function getOverlaps() {
   return pairs.reduce(
