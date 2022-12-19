@@ -23,9 +23,11 @@ function getOverlaps() {
       if (fullMatch) {
         overlaps = { ...overlaps, full: overlaps.full + 1 }
       }
+
       if (partMatch || fullMatch) {
         overlaps = { ...overlaps, partial: overlaps.partial + 1 }
       }
+
       return overlaps
     },
     { full: 0, partial: 0 }
