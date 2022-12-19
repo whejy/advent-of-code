@@ -3,22 +3,22 @@ const input = require('fs')
   .split('\n')
   .map((section) => section.split(','))
 
-const pairs = input.map((el) => [el[0].split('-'), el[1].split('-')])
+// Transmute input to array of integer subarrays
+const pairs = input.map((el) => [
+  [parseInt(el[0].split('-')[0]), parseInt(el[0].split('-')[1])],
+  [parseInt(el[1].split('-')[0]), parseInt(el[1].split('-')[1])],
+])
 
 function getOverlaps() {
   return pairs.reduce(
     (overlaps, pair) => {
       const fullMatch =
-        (parseInt(pair[0][0]) <= parseInt(pair[1][0]) &&
-          parseInt(pair[0][1]) >= parseInt(pair[1][1])) ||
-        (parseInt(pair[1][0]) <= parseInt(pair[0][0]) &&
-          parseInt(pair[1][1]) >= parseInt(pair[0][1]))
+        (pair[0][0] <= pair[1][0] && pair[0][1] >= pair[1][1]) ||
+        (pair[1][0] <= pair[0][0] && pair[1][1] >= pair[0][1])
 
       const partMatch =
-        (parseInt(pair[0][0]) <= parseInt(pair[1][1]) &&
-          parseInt(pair[0][0]) >= parseInt(pair[1][0])) ||
-        (parseInt(pair[0][1]) <= parseInt(pair[1][1]) &&
-          parseInt(pair[0][1]) >= parseInt(pair[1][0]))
+        (pair[0][0] <= pair[1][1] && pair[0][0] >= pair[1][0]) ||
+        (pair[0][1] <= pair[1][1] && pair[0][1] >= pair[1][0])
 
       if (fullMatch) {
         overlaps = { ...overlaps, full: overlaps.full + 1 }
