@@ -1,13 +1,14 @@
 const input = require('fs').readFileSync('input.txt', 'utf-8')
 
-// For Part 1: i + 14 -> i + 4, j === 13 -> j === 3
+const SECTION_SIZE = 14 // = 4 for Part 1
+
 function getMarker() {
   for (let i = 0; i < input.length; i++) {
-    const section = input.slice(i, i + 14)
+    const section = input.slice(i, i + SECTION_SIZE)
     let j = 0
     while (section.indexOf(section[j]) === section.lastIndexOf(section[j])) {
-      if (j === 13) {
-        return { section, marker: i + 14 }
+      if (j === SECTION_SIZE - 1) {
+        return { section, marker: i + SECTION_SIZE }
       }
       j++
     }
