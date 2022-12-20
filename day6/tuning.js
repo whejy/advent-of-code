@@ -9,7 +9,7 @@ function getMarker() {
     while (section.indexOf(section[j]) === section.lastIndexOf(section[j])) {
       if (j === SECTION_SIZE - 1) {
         if (section.length !== SECTION_SIZE) {
-          return 'No marker found, section-size is too large'
+          return 'No marker found, section size is too large'
         }
         return { section, marker: i + SECTION_SIZE }
       }
