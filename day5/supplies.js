@@ -6,13 +6,11 @@ const moves = input[1].split('\n')
 const stackArr = [[], [], [], []]
 const movesArr = []
 
+// each column is 4 spaces wide, ignore numbers and white spaces
 function getStacks() {
   for (let i = 0; i < stack.length; i++) {
-    // each column is 4 spaces wide
     for (let j = 0; j < stack[i].length; j += 4) {
-      // ignore numbers and blank spaces
       if (stack[i][j + 1] !== ' ' && isNaN(Number(stack[i][j + 1]))) {
-        // push element to corresponding index
         stackArr[j / 4].push(stack[i][j + 1])
         stackArr.push([])
       }
