@@ -10,8 +10,9 @@ function getStacks() {
   for (let i = 0; i < stack.length; i++) {
     // each column is 4 spaces wide
     for (let j = 0; j < stack[i].length; j += 4) {
-      // push element to corresponding index
+      // ignore numbers and blank spaces
       if (stack[i][j + 1] !== ' ' && isNaN(Number(stack[i][j + 1]))) {
+        // push element to corresponding index
         stackArr[j / 4].push(stack[i][j + 1])
         stackArr.push([])
       }
@@ -35,7 +36,7 @@ function moveStacks() {
   // perform crate movements
   movesArr.forEach((move) => {
     let removedCrates = filteredStack[move[1] - 1].splice(-move[0])
-    filteredStack[move[2] - 1].push(...removedCrates.reverse())
+    filteredStack[move[2] - 1].push(...removedCrates) // ...removedCrates.reverse() for part1
   })
 
   // collect crates from top of each stack
